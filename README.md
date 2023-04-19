@@ -1,3 +1,5 @@
+![data design](https://ibb.co/XF5Zm1c)
+
 # Intution behind implementation
 
 Assumed each data as node of a graph, if the node type is OBJECT we can add more child node to it.
