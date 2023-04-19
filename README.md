@@ -1,4 +1,4 @@
-![data design](https://ibb.co/XF5Zm1c)
+![data design](https://i.ibb.co/vLdx2p0/Mask-group.png)
 
 # Intution behind implementation
 
