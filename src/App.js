@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import {
+  Heading, Button
+} from '@chakra-ui/react'
+import DataNode from './components/dataNode';
+import { TreeNode, types } from './config';
 
 function App() {
+
+  const [data, setData] = useState([]);
+
+  const addTree = () => {
+    const tr = new TreeNode("addName", types[0], null);
+    setData([...data, tr]);
+  }
+
+//  console.log(data)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='app-top'>
+        <Heading as='h4' size='md'>
+          Field name and type
+        </Heading>
+        <Button onClick={addTree} spacing={4} colorScheme='blue'>+</Button>
+        <Button onClick={() => {
+          console.log(data)
+        }} spacing={4} colorScheme='blue'>Save</Button>
+      </div>
+      {
+        data.map((tree, index) => (
+          <DataNode key={Math.random(1, 0) * 200} node={tree} setData={setData} data={data} i={index}/>
+        ))
+      }
     </div>
   );
 }
