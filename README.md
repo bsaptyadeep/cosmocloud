@@ -4,11 +4,11 @@ Assumed each data as node of a graph, if the node type is OBJECT we can add more
 
 # Data Node Class Data Members
 
-String value
-String type: (OBJECT/NUMBER/STRING/BOOLEAN)
-boolean flag
-Node parent
-Node array of descendants
+String value,
+String type: (OBJECT/NUMBER/STRING/BOOLEAN),
+boolean flag,
+Node parent,
+Node array of descendants,
 
 # Data Node Class Member Methods
 
