@@ -61,7 +61,7 @@ const DataNode = ({ node, setData, data, i}) => {
                 <Switch onChange={(e) => {
                     node.toggleFlag()
                     setData([...data])
-                }} isChecked={!node.flag} id='email-alerts' />
+                }} isChecked={node.flag} id='email-alerts' />
                 <Button onClick={addDescendants} spacing={4} colorScheme='blue'>+</Button>
                 <Button onClick={deleteNode} spacing={4} colorScheme='blue'>Delete</Button>
             </div>

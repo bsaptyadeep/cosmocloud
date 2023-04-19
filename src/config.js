@@ -2,7 +2,7 @@ export class TreeNode {
     constructor(value, type, parent) {
         this.value = value;
         this.type = type;
-        this.flag = true;
+        this.flag = false;
         this.descendants = [];
         this.parent = parent;
     }
